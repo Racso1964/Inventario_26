@@ -1,54 +1,70 @@
+import os
+
 # Mensaje de bienvenida
 print("🛒 Sistema de Control de Inventario")
 
 # Creando una lista para almacenar productos
 inventario = []
 
-# Agregar el primer producto
-producto1 = input("Ingrese el nombre del primer producto producto: ").strip().title()
-cantidad1 = int(input("Ingrese la cantidad inicial en inventario: "))
-precio_unitario1 = float(input("Ingrese el precio unitario del producto: "))
+# Bucle principal del sistema
+while True:
+    print("\nOpciones:")
+    print("1 - Agregar producto")
+    print("2 - Eliminar producto")
+    print("3 - Mostrar inventario")
+    print("4 - Salir")
+    
+    opcion = input("Elija una opción: ")
 
-# Creando un diccionario para el primer producto
-producto_dict1 = {
-    "nombre": producto1,
-    "cantidad": cantidad1,
-    "precio_unitario": precio_unitario1,
-    "valor_total": cantidad1 * precio_unitario1
-}
+    os.system("clear")
 
-# Agregando a la lista
-inventario.append(producto_dict1)
 
-# Agregar el segundo producto
-producto2 = input("Ingrese el nombre del segundo producto: ").strip().title()
-cantidad2 = int(input("Ingrese la cantidad inicial en inventario: "))
-precio_unitario2 = float(input("Ingrese el precio unitario del producto: "))
+    if opcion == "1":
+        # Registro de un nuevo producto
+        producto = input("Ingrese el nombre del producto: ").strip().title()
+        cantidad = int(input("Ingrese la cantidad inicial en inventario: "))
+        precio_unitario = float(input("Ingrese el precio unitario del producto: "))
 
-producto_dict2 = {
-    "nombre": producto2,
-    "cantidad": cantidad2,
-    "precio_unitario": precio_unitario2,
-    "valor_total": cantidad2 * precio_unitario2
-}
+        # Creando un diccionario para el  producto
+        producto_dict = {
+            "nombre": producto,
+            "cantidad": cantidad,
+            "precio_unitario": precio_unitario,
+            "valor_total": cantidad1 * precio_unitario
+        }
 
-inventario.append(producto_dict2)
+    # Agregando a la lista
+    inventario.append(producto_dict)
 
-# Mostrando los productos registrados
-print("\n📦 Inventario Actualizado")
-print("-" * 40)
+    # Agregar el segundo producto
+    producto2 = input("Ingrese el nombre del segundo producto: ").strip().title()
+    cantidad2 = int(input("Ingrese la cantidad inicial en inventario: "))
+    precio_unitario2 = float(input("Ingrese el precio unitario del producto: "))
 
-print(f"Producto       : {inventario[0]['nombre']}")
-print(f"Cantidad       : {inventario[0]['cantidad']}")
-print(f"Precio Unitario: $ {inventario[0]['precio_unitario']:.2f}")
-print(f"Valor Total    : $ {inventario[0]['valor_total']:.2f}")
-print("-" * 40)
+    producto_dict2 = {
+        "nombre": producto2,
+        "cantidad": cantidad2,
+        "precio_unitario": precio_unitario2,
+        "valor_total": cantidad2 * precio_unitario2
+    }
 
-print(f"Producto       : {inventario[1]['nombre']}")
-print(f"Cantidad       : {inventario[1]['cantidad']}")
-print(f"Precio Unitario: $ {inventario[1]['precio_unitario']:.2f}")
-print(f"Valor Total    : $ {inventario[1]['valor_total']:.2f}")
-print("-" * 40)
+    inventario.append(producto_dict2)
+
+    # Mostrando los productos registrados
+    print("\n📦 Inventario Actualizado")
+    print("-" * 40)
+
+    print(f"Producto       : {inventario[0]['nombre']}")
+    print(f"Cantidad       : {inventario[0]['cantidad']}")
+    print(f"Precio Unitario: $ {inventario[0]['precio_unitario']:.2f}")
+    print(f"Valor Total    : $ {inventario[0]['valor_total']:.2f}")
+    print("-" * 40)
+
+    print(f"Producto       : {inventario[1]['nombre']}")
+    print(f"Cantidad       : {inventario[1]['cantidad']}")
+    print(f"Precio Unitario: $ {inventario[1]['precio_unitario']:.2f}")
+    print(f"Valor Total    : $ {inventario[1]['valor_total']:.2f}")
+    print("-" * 40)
 
 
 

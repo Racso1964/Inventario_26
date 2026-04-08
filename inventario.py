@@ -30,26 +30,40 @@ while True:
             "nombre": producto,
             "cantidad": cantidad,
             "precio_unitario": precio_unitario,
-            "valor_total": cantidad1 * precio_unitario
+            "valor_total": cantidad * precio_unitario
         }
 
-    # Agregando a la lista
-    inventario.append(producto_dict)
+        # Agregando el producto al inventario
+        inventario.append(producto_dict)
+        print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
+        
+    
+    elif opcion == "2":
+        # Eliminar un producto
+        if not inventario:
+            print("\n⚠️ ¡El inventario está vacío!")
+            continue
+        
+        producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
 
-    # Agregar el segundo producto
-    producto2 = input("Ingrese el nombre del segundo producto: ").strip().title()
-    cantidad2 = int(input("Ingrese la cantidad inicial en inventario: "))
-    precio_unitario2 = float(input("Ingrese el precio unitario del producto: "))
-
-    producto_dict2 = {
-        "nombre": producto2,
-        "cantidad": cantidad2,
-        "precio_unitario": precio_unitario2,
-        "valor_total": cantidad2 * precio_unitario2
-    }
-
-    inventario.append(producto_dict2)
-
+        # Buscar producto en el inventario
+        for producto in inventario:
+            if producto["nombre"] == producto_eliminar:
+                inventario.remove(producto)
+                print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
+                break
+        else:
+            print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Mostrando los productos registrados
     print("\n📦 Inventario Actualizado")
     print("-" * 40)

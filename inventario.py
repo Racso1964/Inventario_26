@@ -55,6 +55,19 @@ while True:
         else:
             print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
     
+    elif opcion == "3":
+        # Mostrar inventario actualizado
+        if not inventario:
+            print("\n⚠️ ¡El inventario está vacío!")
+        else:
+            print("\n📦 Inventario Actualizado")
+            print("-" * 40)
+            for producto in inventario:
+                print(f"Producto       : {producto['nombre']}")
+                print(f"Cantidad       : {producto['cantidad']}")
+                print(f"Precio Unitario: $ {producto['precio_unitario']:.2f}")
+                print(f"Valor Total    : $ {producto['valor_total']:.2f}")
+                print("-" * 40)
     
     
     

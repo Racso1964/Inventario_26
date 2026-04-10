@@ -69,32 +69,19 @@ while True:
                 print(f"Valor Total    : $ {producto['valor_total']:.2f}")
                 print("-" * 40)
     
+    elif opcion == "4":
+        print("\n👋 Saliendo del sistema...")
+        break
     
-    
-    
-    
-    
-    
-    
-    
-    # Mostrando los productos registrados
-    print("\n📦 Inventario Actualizado")
-    print("-" * 40)
+    else:
+        print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
 
-    print(f"Producto       : {inventario[0]['nombre']}")
-    print(f"Cantidad       : {inventario[0]['cantidad']}")
-    print(f"Precio Unitario: $ {inventario[0]['precio_unitario']:.2f}")
-    print(f"Valor Total    : $ {inventario[0]['valor_total']:.2f}")
-    print("-" * 40)
-
-    print(f"Producto       : {inventario[1]['nombre']}")
-    print(f"Cantidad       : {inventario[1]['cantidad']}")
-    print(f"Precio Unitario: $ {inventario[1]['precio_unitario']:.2f}")
-    print(f"Valor Total    : $ {inventario[1]['valor_total']:.2f}")
-    print("-" * 40)
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
 

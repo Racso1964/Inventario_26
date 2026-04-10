@@ -16,7 +16,7 @@ while True:
     
     opcion = input("Elija una opción: ")
 
-    os.system("clear")
+    os.system("cls")
 
 
     if opcion == "1":

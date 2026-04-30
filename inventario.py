@@ -1,41 +1,47 @@
-import os
-
 # Mensaje de bienvenida
 print("🛒 Sistema de Control de Inventario")
 
 # Creando una lista para almacenar productos
 inventario = []
 
-# Bucle principal del sistema
-while True:
-    print("\nOpciones:")
-    print("1 - Agregar producto")
-    print("2 - Eliminar producto")
-    print("3 - Mostrar inventario")
-    print("4 - Salir")
+def agregar_producto():
+    pass
+
+def menu():
+    """
+    Muestra el menú de opciones y gestiona la interacción del usuario.
+    """
+
+    while True:
+        print("\nOpciones:")
+        print("1 - Agregar producto")
+        print("2 - Eliminar producto")
+        print("3 - Mostrar inventario")
+        print("4 - Salir")
     
-    opcion = input("Elija una opción: ")
+        opcion = input("Elija una opción: ")
 
-    os.system("cls")
+        #os.system("cls")
 
 
-    if opcion == "1":
-        # Registro de un nuevo producto
-        producto = input("Ingrese el nombre del producto: ").strip().title()
-        cantidad = int(input("Ingrese la cantidad inicial en inventario: "))
-        precio_unitario = float(input("Ingrese el precio unitario del producto: "))
+        if opcion == "1":
+            #agregar_producto()
+            # Registro de un nuevo producto
+            #producto = input("Ingrese el nombre del producto: ").strip().title()
+            #cantidad = int(input("Ingrese la cantidad inicial en inventario: "))
+            #precio_unitario = float(input("Ingrese el precio unitario del producto: "))
 
-        # Creando un diccionario para el  producto
-        producto_dict = {
-            "nombre": producto,
-            "cantidad": cantidad,
-            "precio_unitario": precio_unitario,
-            "valor_total": cantidad * precio_unitario
-        }
+            # Creando un diccionario para el  producto
+            #producto_dict = {
+                #"nombre": producto,
+                #"cantidad": cantidad,
+                #"precio_unitario": precio_unitario,
+                #"valor_total": cantidad * precio_unitario
+            #}
 
-        # Agregando el producto al inventario
-        inventario.append(producto_dict)
-        print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
+            # Agregando el producto al inventario
+            #inventario.append(producto_dict)
+            #print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
         
     
     elif opcion == "2":
@@ -77,11 +83,5 @@ while True:
         print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
 
     
-    
-    
-    
-    
-    
-    
-    
+
 

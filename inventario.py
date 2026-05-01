@@ -19,7 +19,26 @@ def agregar_producto():
         cantidad = input("Ingrese la cantidad inicial en inventario: ")
     cantidad = int(cantidad)
 
-    
+    # Validación del precio unitario (solo acepta números decimales positivos)
+    precio_unitario = (input("Ingrese el precio unitario del producto: "))
+    while not (precio_unitario.replace(".", "").isdigit() or precio_unitario.replace(",", "").isdigit()):
+        print("❌ Entrada inválida! El precio debe ser un número positivo (ej: 10.50).")
+        precio_unitario = input("Ingrese el precio unitario del producto: ")
+
+    # Reemplazar coma por punto, si es necesario
+    precio_unitario = float(precio_unitario.replace(",", "."))
+
+    #Creando un diccionario para el  producto
+    producto_dict = {
+                "nombre": producto,
+                "cantidad": cantidad,
+                "precio_unitario": precio_unitario,
+                "valor_total": cantidad * precio_unitario
+    }
+
+
+
+
 
 
 def menu():
@@ -45,15 +64,10 @@ def menu():
             # Registro de un nuevo producto
             
             
-            #precio_unitario = float(input("Ingrese el precio unitario del producto: "))
+            
 
-            # Creando un diccionario para el  producto
-            #producto_dict = {
-                #"nombre": producto,
-                #"cantidad": cantidad,
-                #"precio_unitario": precio_unitario,
-                #"valor_total": cantidad * precio_unitario
-            #}
+            
+            
 
             # Agregando el producto al inventario
             #inventario.append(producto_dict)

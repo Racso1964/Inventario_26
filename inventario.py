@@ -25,6 +25,7 @@ def menu():
 
 
         if opcion == "1":
+            pass
             #agregar_producto()
             # Registro de un nuevo producto
             #producto = input("Ingrese el nombre del producto: ").strip().title()
@@ -44,43 +45,43 @@ def menu():
             #print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
         
     
-    elif opcion == "2":
-        # Eliminar un producto
-        if not inventario:
-            print("\n⚠️ ¡El inventario está vacío!")
-            continue
+        elif opcion == "2":
+            #Eliminar un producto
+            if not inventario:
+                print("\n⚠️ ¡El inventario está vacío!")
+                continue
         
-        producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
+            producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
 
-        # Buscar producto en el inventario
-        for producto in inventario:
-            if producto["nombre"] == producto_eliminar:
-                inventario.remove(producto)
-                print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
-                break
-        else:
-            print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
-    
-    elif opcion == "3":
-        # Mostrar inventario actualizado
-        if not inventario:
-            print("\n⚠️ ¡El inventario está vacío!")
-        else:
-            print("\n📦 Inventario Actualizado")
-            print("-" * 40)
+            # Buscar producto en el inventario
             for producto in inventario:
-                print(f"Producto       : {producto['nombre']}")
-                print(f"Cantidad       : {producto['cantidad']}")
-                print(f"Precio Unitario: $ {producto['precio_unitario']:.2f}")
-                print(f"Valor Total    : $ {producto['valor_total']:.2f}")
+                if producto["nombre"] == producto_eliminar:
+                    inventario.remove(producto)
+                    print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
+                    break
+            else:
+                print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
+    
+        elif opcion == "3":
+            # Mostrar inventario actualizado
+            if not inventario:
+                print("\n⚠️ ¡El inventario está vacío!")
+            else:
+                print("\n📦 Inventario Actualizado")
                 print("-" * 40)
+                for producto in inventario:
+                    print(f"Producto       : {producto['nombre']}")
+                    print(f"Cantidad       : {producto['cantidad']}")
+                    print(f"Precio Unitario: $ {producto['precio_unitario']:.2f}")
+                    print(f"Valor Total    : $ {producto['valor_total']:.2f}")
+                    print("-" * 40)
     
-    elif opcion == "4":
-        print("\n👋 Saliendo del sistema...")
-        break
+        elif opcion == "4":
+            print("\n👋 Saliendo del sistema...")
+            break
     
-    else:
-        print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
+        else:
+            print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
 
     
 

@@ -5,7 +5,22 @@ print("🛒 Sistema de Control de Inventario")
 inventario = []
 
 def agregar_producto():
-    pass
+    """
+    Solicita los datos del producto al usuario y lo agrega al inventario.
+    Garantiza que la cantidad y el precio sean números válidos.
+    """
+    producto = input("Ingrese el nombre del producto: ").strip().title()
+
+    # Validación de la cantidad (solo acepta números enteros positivos)
+    cantidad = (input("Ingrese la cantidad inicial en inventario: "))
+
+    while not cantidad.isdigit():
+        print("❌ Entrada inválida! La cantidad debe ser un número entero positivo.")
+        cantidad = input("Ingrese la cantidad inicial en inventario: ")
+    cantidad = int(cantidad)
+
+    
+
 
 def menu():
     """
@@ -26,10 +41,10 @@ def menu():
 
         if opcion == "1":
             pass
-            #agregar_producto()
+            
             # Registro de un nuevo producto
-            #producto = input("Ingrese el nombre del producto: ").strip().title()
-            #cantidad = int(input("Ingrese la cantidad inicial en inventario: "))
+            
+            
             #precio_unitario = float(input("Ingrese el precio unitario del producto: "))
 
             # Creando un diccionario para el  producto

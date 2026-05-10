@@ -36,7 +36,9 @@ def agregar_producto():
                 "valor_total": cantidad * precio_unitario
     }
 
-
+    # Agregando el producto al inventario
+    inventario.append(producto_dict)
+    print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
 
 
 
@@ -69,9 +71,7 @@ def menu():
             
             
 
-            # Agregando el producto al inventario
-            #inventario.append(producto_dict)
-            #print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
+            
         
     
         elif opcion == "2":

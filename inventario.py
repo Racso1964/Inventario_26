@@ -61,19 +61,7 @@ def menu():
 
 
         if opcion == "1":
-            pass
-            
-            # Registro de un nuevo producto
-            
-            
-            
-
-            
-            
-
-            
-        
-    
+            agregar_producto()
         elif opcion == "2":
             #Eliminar un producto
             if not inventario:
@@ -111,6 +99,9 @@ def menu():
     
         else:
             print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
+
+# Llamando al menú para iniciar el sistema
+menu()
 
     
 

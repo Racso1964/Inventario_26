@@ -41,10 +41,19 @@ def agregar_producto():
     print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
 
 def eliminar_producto(producto_eliminar):
+    """
+    Elimina un producto del inventario según el nombre proporcionado.
+
+    Parámetros:
+    - producto_eliminar (str): Nombre del producto a eliminar.
+
+    Retorno:
+    - None
+    """
 
 
 def menu():
-    
+
     """
     Muestra el menú de opciones y gestiona la interacción del usuario.
     """

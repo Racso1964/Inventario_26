@@ -40,10 +40,11 @@ def agregar_producto():
     inventario.append(producto_dict)
     print(f"\n✅ ¡Producto '{producto}' agregado al inventario!")
 
-
+def eliminar_producto(producto_eliminar):
 
 
 def menu():
+    
     """
     Muestra el menú de opciones y gestiona la interacción del usuario.
     """
@@ -62,13 +63,13 @@ def menu():
 
         if opcion == "1":
             agregar_producto()
-        elif opcion == "2":
-            #Eliminar un producto
-            if not inventario:
-                print("\n⚠️ ¡El inventario está vacío!")
-                continue
-        
+        elif opcion == "2":       
             producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
+
+
+
+
+
 
             # Buscar producto en el inventario
             for producto in inventario:

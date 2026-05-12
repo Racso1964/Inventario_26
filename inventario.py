@@ -50,6 +50,18 @@ def eliminar_producto(producto_eliminar):
     Retorno:
     - None
     """
+    if not inventario:
+                print("\n⚠️ ¡El inventario está vacío!")
+                return
+    for producto in inventario:
+                if producto["nombre"] == producto_eliminar:
+                    inventario.remove(producto)
+                    print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
+                    return
+    print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
+
+
+
 
 
 def menu():
@@ -81,18 +93,13 @@ def menu():
 
 
             # Buscar producto en el inventario
-            for producto in inventario:
-                if producto["nombre"] == producto_eliminar:
-                    inventario.remove(producto)
-                    print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
-                    break
-            else:
-                print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
+            
+            
+                
     
         elif opcion == "3":
             # Mostrar inventario actualizado
-            if not inventario:
-                print("\n⚠️ ¡El inventario está vacío!")
+            
             else:
                 print("\n📦 Inventario Actualizado")
                 print("-" * 40)

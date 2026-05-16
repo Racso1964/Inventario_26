@@ -70,7 +70,14 @@ def mostrar_inventario():
         print("\n⚠️ ¡El inventario está vacío!")
         return
 
-
+    print("\n📦 Inventario Actualizado")
+    print("-" * 40)
+    for producto in inventario:
+        print(f"Producto       : {producto['nombre']}")
+        print(f"Cantidad       : {producto['cantidad']}")
+        print(f"Precio Unitario: $ {producto['precio_unitario']:.2f}")
+        print(f"Valor Total    : $ {producto['valor_total']:.2f}")
+        print("-" * 40)
 
 def menu():
 
@@ -109,14 +116,7 @@ def menu():
             # Mostrar inventario actualizado
             
             else:
-                print("\n📦 Inventario Actualizado")
-                print("-" * 40)
-                for producto in inventario:
-                    print(f"Producto       : {producto['nombre']}")
-                    print(f"Cantidad       : {producto['cantidad']}")
-                    print(f"Precio Unitario: $ {producto['precio_unitario']:.2f}")
-                    print(f"Valor Total    : $ {producto['valor_total']:.2f}")
-                    print("-" * 40)
+                
     
         elif opcion == "4":
             print("\n👋 Saliendo del sistema...")

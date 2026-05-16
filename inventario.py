@@ -94,28 +94,13 @@ def menu():
     
         opcion = input("Elija una opción: ")
 
-        #os.system("cls")
-
-
         if opcion == "1":
             agregar_producto()
         elif opcion == "2":       
             producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
-
-
-
-
-
-
-            # Buscar producto en el inventario
-            
-            
-                
-    
+            eliminar_producto(producto_eliminar)
         elif opcion == "3":
-            # Mostrar inventario actualizado
-            
-            else:
+            mostrar_inventario()
                 
     
         elif opcion == "4":

@@ -53,14 +53,22 @@ def eliminar_producto(producto_eliminar):
     if not inventario:
                 print("\n⚠️ ¡El inventario está vacío!")
                 return
+    
     for producto in inventario:
-                if producto["nombre"] == producto_eliminar:
-                    inventario.remove(producto)
-                    print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
-                    return
+        if producto["nombre"] == producto_eliminar:
+            inventario.remove(producto)
+            print(f"\n✅ ¡Producto '{producto_eliminar}' eliminado del inventario!")
+            return
+                
     print(f"\n❌ Producto '{producto_eliminar}' no encontrado en el inventario.")
 
-
+def mostrar_inventario():
+    """
+    Muestra todos los productos registrados en el inventario.
+    """
+    if not inventario:
+        print("\n⚠️ ¡El inventario está vacío!")
+        return
 
 
 

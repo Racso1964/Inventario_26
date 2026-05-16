@@ -80,11 +80,9 @@ def mostrar_inventario():
         print("-" * 40)
 
 def menu():
-
     """
     Muestra el menú de opciones y gestiona la interacción del usuario.
     """
-
     while True:
         print("\nOpciones:")
         print("1 - Agregar producto")
@@ -100,13 +98,10 @@ def menu():
             producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
             eliminar_producto(producto_eliminar)
         elif opcion == "3":
-            mostrar_inventario()
-                
-    
+            mostrar_inventario()                    
         elif opcion == "4":
             print("\n👋 Saliendo del sistema...")
-            break
-    
+            break    
         else:
             print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
 

@@ -88,7 +88,8 @@ def menu():
         print("1 - Agregar producto")
         print("2 - Eliminar producto")
         print("3 - Mostrar inventario")
-        print("4 - Salir")
+        print("4 - Exportar informe inventario actual en formato PDF")
+        print("5 - Salir")
     
         opcion = input("Elija una opción: ")
 
@@ -98,12 +99,15 @@ def menu():
             producto_eliminar = input("Ingrese el nombre del producto a eliminar: ").strip().title()
             eliminar_producto(producto_eliminar)
         elif opcion == "3":
-            mostrar_inventario()                    
+            mostrar_inventario()
         elif opcion == "4":
+            pass
+            #generar_informe()               
+        elif opcion == "5":
             print("\n👋 Saliendo del sistema...")
             break    
         else:
-            print("\n❌ ¡Opción inválida! Elija una opción del 1 al 4.")
+            print("\n❌ ¡Opción inválida! Elija una opción del 1 al 5.")
 
 # Llamando al menú para iniciar el sistema
 menu()

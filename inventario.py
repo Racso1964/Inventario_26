@@ -79,6 +79,9 @@ def mostrar_inventario():
         print(f"Valor Total    : $ {producto['valor_total']:.2f}")
         print("-" * 40)
 
+def generar_informe():
+    pass
+
 def menu():
     """
     Muestra el menú de opciones y gestiona la interacción del usuario.
@@ -101,8 +104,7 @@ def menu():
         elif opcion == "3":
             mostrar_inventario()
         elif opcion == "4":
-            pass
-            #generar_informe()               
+            generar_informe()               
         elif opcion == "5":
             print("\n👋 Saliendo del sistema...")
             break    

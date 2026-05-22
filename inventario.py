@@ -80,7 +80,16 @@ def mostrar_inventario():
         print("-" * 40)
 
 def generar_informe():
-    pass
+    
+    from fpdf import FPDF
+
+    autor = input("Nombre de quien genera el informe: ")
+    revisor = input("Nombre de quien revisa el informe: ")
+
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("helvetica", size=24, style="B")
+
 
 def menu():
     """

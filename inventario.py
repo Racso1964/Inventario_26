@@ -90,6 +90,10 @@ def generar_informe():
     pdf.add_page()
     pdf.set_font("helvetica", size=24, style="B")
 
+    # Titulo del informe
+    pdf.cell(w=190, h=10, text="Sistema de Gestión de Inventario", align="C")
+    pdf.ln(20)
+
 
 def menu():
     """

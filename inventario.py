@@ -94,6 +94,10 @@ def generar_informe():
     pdf.cell(w=190, h=10, text="Sistema de Gestión de Inventario", align="C")
     pdf.ln(20)
 
+    resumen = """
+En seguida se muestra el inventario actual para todos los productos después de su gestión (añadir o eliminar productos).
+También se muestra el Total Unificado del inventario en la tabla que se muestra en seguida
+"""
 
 def menu():
     """

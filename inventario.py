@@ -105,6 +105,9 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
 
     ancho_col = [60, 30, 60, 40]
 
+    # Agregar encabezados a la tabla
+    encabezado = ["Producto", "Cantidad", "Precio Unitario", "Valor Total"]
+
 
 
 

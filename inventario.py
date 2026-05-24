@@ -99,6 +99,15 @@ En seguida se muestra el inventario actual para todos los productos después de 
 También se muestra el Total Unificado del inventario en la tabla que se muestra en seguida
 """
 
+    pdf.set_font("helvetica", size=16)
+    pdf.multi_cell(w=180, h=10, text=resumen.strip(), align="J")
+    pdf.ln(10)
+
+    ancho_col = [60, 30, 60, 40]
+
+
+
+
 def menu():
     """
     Muestra el menú de opciones y gestiona la interacción del usuario.

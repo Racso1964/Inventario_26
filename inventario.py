@@ -109,7 +109,7 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     encabezado = ["Producto", "Cantidad", "Precio Unitario", "Valor Total"]
 
     for i, nombre_col in enumerate(encabezado):
-        pass
+        pdf.set_font("helvetica", size=16, style="B")
 
 
 

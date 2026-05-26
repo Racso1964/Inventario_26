@@ -108,6 +108,9 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     # Agregar encabezados a la tabla
     encabezado = ["Producto", "Cantidad", "Precio Unitario", "Valor Total"]
 
+    for i, nombre_col in enumerate(encabezado):
+        pass
+
 
 
 

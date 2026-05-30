@@ -110,7 +110,9 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
 
     for i, nombre_col in enumerate(encabezado):
         pdf.set_font("helvetica", size=16, style="B")
+        pdf.cell(w = ancho_col[i], h=10, text=nombre_col, border=1, align="C")
 
+    pdf.ln()
 
 
 

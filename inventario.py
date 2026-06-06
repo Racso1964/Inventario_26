@@ -114,6 +114,10 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
 
     pdf.ln()
 
+    # Agregar data en las fila
+    productos = [list(producto.values()) for producto in inventario]
+
+
 
 
 def menu():

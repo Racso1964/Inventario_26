@@ -117,7 +117,8 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     # Agregar data en las fila
     productos = [list(producto.values()) for producto in inventario]
 
-
+    for fila in productos:
+        pass
 
 
 def menu():

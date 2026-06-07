@@ -118,7 +118,10 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     productos = [list(producto.values()) for producto in inventario]
 
     for fila in productos:
-        pass
+        for i, item in enumerate(fila):
+            pass
+
+
 
 
 def menu():

@@ -119,7 +119,9 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
 
     for fila in productos:
         for i, item in enumerate(fila):
-            pass
+            if isinstance(item, float) or isinstance(item, int) and fila.index(item) != 1:
+                pass
+
 
 
 

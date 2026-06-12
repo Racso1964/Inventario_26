@@ -121,6 +121,7 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
         for i, item in enumerate(fila):
             if isinstance(item, float) or isinstance(item, int) and fila.index(item) != 1:
                 pdf.set_font("helvetica", size=14)
+                pdf.cell(w=ancho_col[i], h=10, text=f"${item:.2f}", border=1, align="C")
 
 
 

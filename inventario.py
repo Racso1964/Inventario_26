@@ -106,14 +106,14 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     pdf.multi_cell(w=180, h=10, text=resumen.strip(), align="J")
     pdf.ln(10)
 
-    ancho_col = [60, 30, 60, 40]
+    ancho_cols = [60, 30, 60, 40]
 
     # Agregar encabezados a la tabla
     encabezado = ["Producto", "Cantidad", "Precio Unitario", "Valor Total"]
 
     for i, nombre_col in enumerate(encabezado):
         pdf.set_font("helvetica", size=16, style="B")
-        pdf.cell(w = ancho_col[i], h=10, text=nombre_col, border=1, align="C")
+        pdf.cell(w = ancho_cols[i], h=10, text=nombre_col, border=1, align="C")
 
     pdf.ln()
 
@@ -124,8 +124,10 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
         for i, item in enumerate(fila):
             if isinstance(item, float) or isinstance(item, int) and fila.index(item) != 1:
                 pdf.set_font("helvetica", size=14)
-                pdf.cell(w=ancho_col[i], h=10, text=f"${item:.2f}", border=1, align="C")
-
+                pdf.cell(w=ancho_cols[i], h=10, text=f"${item:.2f}", border=1, align="C")
+            else:
+                pdf.set_font("helvetica", size=14)
+                pdf.cell(w=ancho_cols[i], h=10, text=str(item), border=1, align="C")
 
 
 

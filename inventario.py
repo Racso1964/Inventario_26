@@ -80,10 +80,9 @@ def mostrar_inventario():
         print("-" * 40)
 
 def generar_informe():
-    from fpdf import FPDF
-    from PyPDF2 import PdfReader, PdfWriter
-    import io
 
+    from fpdf import FPDF
+   
     autor = input("Nombre de quien genera el informe: ")
     revisor = input("Nombre de quien revisa el informe: ")
 
@@ -92,11 +91,9 @@ def generar_informe():
     pdf.set_font("helvetica", size=24, style="B")
 
     # Titulo del informe
-    pdf.ln(40)
     pdf.cell(w=190, h=10, text="Sistema de Gestión de Inventario", align="C")
     pdf.ln(20)
 
-    # resumen del informe.
     resumen = """
 En seguida se muestra el inventario actual para todos los productos después de su gestión (añadir o eliminar productos).
 También se muestra el Total Unificado del inventario en la tabla que se muestra en seguida
@@ -128,7 +125,7 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
             else:
                 pdf.set_font("helvetica", size=14)
                 pdf.cell(w=ancho_cols[i], h=10, text=str(item), border=1, align="C")
-
+        pdf.ln()
 
 
 

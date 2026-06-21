@@ -128,7 +128,11 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
         pdf.ln()
 
     gran_total = sum(producto["valor_total"] for producto in inventario)
+    pdf.set_font("helvetica", size=14, style="B")
 
+
+
+    
 
 def menu():
     """

@@ -129,10 +129,10 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
 
     gran_total = sum(producto["valor_total"] for producto in inventario)
     pdf.set_font("helvetica", size=14, style="B")
+    pdf.cell(w=sum(ancho_cols[:-1]), h=10, text="TOTAL", border=1, align="C")
+    pdf.cell(w=ancho_cols[-1], h=10, text=f"${gran_total:.2f}", border=1, align="C")
 
 
-
-    
 
 def menu():
     """

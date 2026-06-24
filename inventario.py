@@ -135,6 +135,13 @@ También se muestra el Total Unificado del inventario en la tabla que se muestra
     pdf.ln(90)
 
     pdf.cell(w=80, text=f"Autor: {autor.strip().title()}", border="T")
+    pdf.ln(30)
+    pdf.cell(w=80, text=f"Revisor: {revisor.strip().title()}", border="T")
+
+
+
+
+
 
 
 def menu():
